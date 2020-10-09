@@ -1,4 +1,4 @@
-### stack相关算法
+### 栈(stack) 相关算法
 
 1. square.py 检查单个 "(" 是否配对
 1. par_checker.py 检查单个 "{[(" 是否配对
