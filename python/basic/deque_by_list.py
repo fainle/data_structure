@@ -19,10 +19,16 @@ class Deque:
         self.data.append(item)
 
     def remove_front(self):
+        if self.is_empty():
+            return None
+
         self.length -= 1
         return self.data.pop(0)
 
     def remove_rear(self):
+        if self.is_empty():
+            return None
+
         self.length -= 1
         return self.data.pop()
 
@@ -36,9 +42,11 @@ class Deque:
 if __name__ == '__main__':
     deque = Deque()
     assert deque.is_empty() is True
+
     deque.add_front(0)
     deque.add_rear(1)
     deque.add_rear(2)
+
     assert deque.length == 3
     assert deque.remove_front() == 0
     assert deque.remove_rear() == 2
